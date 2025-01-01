@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct QuestionViewZodiakQuiz: View {
+struct QuestionViewCasuquiz: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var vm: QuestionViewModelZodiakQuiz
+    @StateObject var vm: QuestionViewModelCasuquiz
     
       var d4242d2 = "24dd2d"
     var d24d2d = 242
@@ -26,7 +26,7 @@ struct QuestionViewZodiakQuiz: View {
     
     private struct IJcowkmrfco3r {}
     init(type: GameTypeZQ) {
-        _vm = StateObject(wrappedValue: QuestionViewModelZodiakQuiz(typeOfGame: type))
+        _vm = StateObject(wrappedValue: QuestionViewModelCasuquiz(typeOfGame: type))
     }
     
     var body: some View {
@@ -55,7 +55,7 @@ struct QuestionViewZodiakQuiz: View {
     
     private var enterNameView: some View {
         ZStack {
-            Color.hex("110B1D")
+            Color.hex("2A2345")
                 .edgesIgnoringSafeArea(.all)
                 .opacity(0.76)
             
@@ -111,16 +111,6 @@ struct QuestionViewZodiakQuiz: View {
                 .frame(height: 100)
             Spacer()
             
-//           Image("question.bg")
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .padding(.horizontal, 30)
-//                .overlay() {
-//                    Text(vm.currentQuestion.question)
-//                        .withFont(size: 20, weight: .semibold)
-//                        .padding(.horizontal, 40)
-//                }
-            
             VStack(spacing: 30) {
                 ForEach(Array(vm.currentQuestion.answerOptions.enumerated()), id: \.element) { index, answer in
                     Button {
@@ -141,7 +131,7 @@ struct QuestionViewZodiakQuiz: View {
                                         .withFont(size: 28, weight: .regular)
                                         .font(.system(size: 18, weight: .medium))
                                         .foregroundColor(.black)
-                                        .padding(.leading, 25)
+                                        .padding(.leading, 15)
                                     
                                     Spacer()
                                     
@@ -328,5 +318,5 @@ struct QuestionViewZodiakQuiz: View {
 }
 
 #Preview {
-    QuestionViewZodiakQuiz(type: .withF)
+    QuestionViewCasuquiz(type: .oneP)
 }

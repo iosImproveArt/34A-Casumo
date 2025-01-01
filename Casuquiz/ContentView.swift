@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct ContentViewZodiakQuiz: View {
+struct ContentViewCasuquiz: View {
     @AppStorage("notificationsAvalible") var notificationsAvalible = true
     @State var showLoading = true
     @State var selectedTab: Tabs = .quiz
@@ -31,13 +31,13 @@ struct ContentViewZodiakQuiz: View {
                         
                         switch selectedTab {
                         case .quiz:
-                            QuestionPickViewZodiakQuiz()
+                            QuestionPickViewCasuquiz()
                         case .profile:
-                            ProfileViewZodiakQuiz()
+                            ProfileViewCasuquiz()
                         case .facts:
-                            FactsViewZodiakQuiz()
+                            FactsViewCasuquiz()
                         case .questions:
-                            QuestionsViewZodiakQuiz()
+                            QuestionsViewCasuquiz()
                         }
                         tapBar
                     }.background(2, padding: 0)
@@ -55,7 +55,7 @@ struct ContentViewZodiakQuiz: View {
     private var topBar: some View {
         HStack {
             NavigationLink {
-                PrivacyViewZodiakQuiz(showLoading: .constant(true), fromMainView: true)
+                PrivacyViewCasuquiz(showLoading: .constant(true), fromMainView: true)
             } label: {
                 Text("Privacy policy")
                     .withFont(size: 16, weight: .light)
@@ -66,9 +66,9 @@ struct ContentViewZodiakQuiz: View {
             Button {
                 notificationsAvalible.toggle()
                 if notificationsAvalible {
-                    NotificationManagerZodiakQuiz.shared.createDailyNotification()
+                    NotificationManagerCasuquiz.shared.createDailyNotification()
                 } else {
-                    NotificationManagerZodiakQuiz.shared.removePendingNotifications()
+                    NotificationManagerCasuquiz.shared.removePendingNotifications()
                 }
             } label: {
                 Image("notification.label")
@@ -126,7 +126,7 @@ struct ContentViewZodiakQuiz: View {
 }
 
 #Preview {
-    ContentViewZodiakQuiz(showLoading: false)
+    ContentViewCasuquiz(showLoading: false)
 }
 
 

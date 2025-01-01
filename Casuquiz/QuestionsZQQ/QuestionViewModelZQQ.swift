@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-class QuestionViewModelZodiakQuiz: ObservableObject {
+class QuestionViewModelCasuquiz: ObservableObject {
     let typeOfGame: GameTypeZQ
     
     var wrfcwrcf = "3235245"
@@ -33,13 +33,13 @@ class QuestionViewModelZodiakQuiz: ObservableObject {
     @Published var player2RightAnswers = 0
     
     
-    @Published var listOfQuestions: [QuestionZQ]
+    @Published var listOfQuestions: [QuestionCasu]
     @Published var answer = ""
     
     @Published var showFinishView = false
     @Published var showEnterView = false
     
-    var currentQuestion: QuestionZQ {
+    var currentQuestion: QuestionCasu {
         listOfQuestions[questionNumber - 1]
     }
     
@@ -48,7 +48,7 @@ class QuestionViewModelZodiakQuiz: ObservableObject {
         
         if typeOfGame == .withC { player2 = "Computer" }
         if typeOfGame == .withF { showEnterView = true }
-        listOfQuestions =  Array(QuestionZQ.advancedQuestions.shuffled().prefix(20))
+        listOfQuestions =  Array(QuestionCasu.advancedQuestions.shuffled().prefix(20))
     }
     
     
@@ -86,441 +86,547 @@ enum GameTypeZQ {
     case withF
 }
 
-struct QuestionZQ {
+struct QuestionCasu {
     let question: String
     let correctAnswer: String
     let answerOptions: [String]
     private let rvrgv = "fwtfwrtf"
-    static let advancedQuestions: [QuestionZQ] = [
-        QuestionZQ(
-                question: "What is the chemical symbol for silver?",
-                correctAnswer: "Ag",
-                answerOptions: ["Ag", "Au", "Cu", "Pb"]
-            ),
-            QuestionZQ(
-                question: "Which organ in the human body is responsible for filtering blood?",
-                correctAnswer: "Kidneys",
-                answerOptions: ["Heart", "Lungs", "Liver", "Kidneys"]
-            ),
-            QuestionZQ(
-                question: "What is the largest animal in the world?",
-                correctAnswer: "Blue whale",
-                answerOptions: ["Elephant", "Blue whale", "Giraffe", "Sperm whale"]
-            ),
-            QuestionZQ(
-                question: "Which metal is commonly used for making electrical wires?",
-                correctAnswer: "Copper",
-                answerOptions: ["Copper", "Iron", "Aluminum", "Silver"]
-            ),
-            QuestionZQ(
-                question: "Which planet orbits the Sun the fastest?",
-                correctAnswer: "Mercury",
-                answerOptions: ["Mercury", "Venus", "Mars", "Jupiter"]
-            ),
-            QuestionZQ(
-                question: "What is the largest desert in the world?",
-                correctAnswer: "Sahara",
-                answerOptions: ["Sahara", "Gobi", "Kalahari", "Antarctica"]
-            ),
-            QuestionZQ(
-                question: "Who wrote 'The Testament'?",
-                correctAnswer: "Taras Shevchenko",
-                answerOptions: ["Lesya Ukrainka", "Ivan Franko", "Taras Shevchenko", "Mykola Khvylovy"]
-            ),
-            QuestionZQ(
-                question: "What gas do plants release during photosynthesis?",
-                correctAnswer: "Oxygen",
-                answerOptions: ["Carbon dioxide", "Oxygen", "Hydrogen", "Nitrogen"]
-            ),
-            QuestionZQ(
-                question: "What is the capital of Germany?",
-                correctAnswer: "Berlin",
-                answerOptions: ["Munich", "Berlin", "Hamburg", "Cologne"]
-            ),
-            QuestionZQ(
-                question: "Which element has the atomic number 1?",
-                correctAnswer: "Hydrogen",
-                answerOptions: ["Hydrogen", "Helium", "Oxygen", "Nitrogen"]
-            ),
-        QuestionZQ(
-            question: "What is the speed of sound in air at sea level?",
-            correctAnswer: "343 m/s",
-            answerOptions: ["300 m/s", "343 m/s", "400 m/s", "500 m/s"]
+    
+    static let advancedQuestions: [QuestionCasu] = [
+        QuestionCasu(
+            question: "Which planet is known as the Red Planet?",
+            correctAnswer: "Mars",
+            answerOptions: ["Mars", "Venus", "Jupiter", "Saturn"]
         ),
-        QuestionZQ(
-            question: "Which Nobel Prize category was first awarded in 1969?",
-            correctAnswer: "Economic Sciences",
-            answerOptions: ["Physics", "Literature", "Economic Sciences", "Medicine"]
+        QuestionCasu(
+            question: "What is the most abundant gas in Earth's atmosphere?",
+            correctAnswer: "Nitrogen",
+            answerOptions: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"]
         ),
-        QuestionZQ(
-            question: "What is the primary function of red blood cells?",
-            correctAnswer: "To carry oxygen",
-            answerOptions: ["To fight infections", "To carry oxygen", "To clot blood", "To regulate temperature"]
+        QuestionCasu(
+            question: "Who developed the theory of general relativity?",
+            correctAnswer: "Albert Einstein",
+            answerOptions: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Niels Bohr"]
         ),
-        QuestionZQ(
-            question: "Who painted the ceiling of the Sistine Chapel?",
-            correctAnswer: "Michelangelo",
-            answerOptions: ["Leonardo da Vinci", "Raphael", "Michelangelo", "Donatello"]
-        ),
-        QuestionZQ(
-            question: "What is the capital city of Japan?",
+        QuestionCasu(
+            question: "What is the capital of Japan?",
             correctAnswer: "Tokyo",
-            answerOptions: ["Kyoto", "Tokyo", "Osaka", "Nagoya"]
+            answerOptions: ["Kyoto", "Osaka", "Tokyo", "Hiroshima"]
         ),
-        QuestionZQ(
-            question: "What is the term for the study of fungi?",
-            correctAnswer: "Mycology",
-            answerOptions: ["Entomology", "Mycology", "Botany", "Zoology"]
+        QuestionCasu(
+            question: "Which element is represented by the symbol 'O'?",
+            correctAnswer: "Oxygen",
+            answerOptions: ["Oxygen", "Osmium", "Gold", "Helium"]
         ),
-        QuestionZQ(
-            question: "What is the SI unit of force?",
-            correctAnswer: "Newton",
-            answerOptions: ["Pascal", "Newton", "Joule", "Watt"]
+        QuestionCasu(
+            question: "What is the smallest prime number?",
+            correctAnswer: "2",
+            answerOptions: ["1", "2", "3", "5"]
         ),
-        QuestionZQ(
-            question: "Which country invented gunpowder?",
-            correctAnswer: "China",
-            answerOptions: ["India", "China", "Greece", "Persia"]
+        QuestionCasu(
+            question: "Which continent is the Sahara Desert located on?",
+            correctAnswer: "Africa",
+            answerOptions: ["Asia", "Australia", "Africa", "South America"]
         ),
-        QuestionZQ(
-            question: "What is the largest organ in the human body?",
-            correctAnswer: "Skin",
-            answerOptions: ["Liver", "Heart", "Skin", "Brain"]
+        QuestionCasu(
+            question: "Who painted the Mona Lisa?",
+            correctAnswer: "Leonardo da Vinci",
+            answerOptions: ["Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"]
         ),
-        QuestionZQ(
-            question: "What is the boiling point of water at sea level?",
-            correctAnswer: "100°C",
-            answerOptions: ["90°C", "100°C", "110°C", "120°C"]
+        QuestionCasu(
+            question: "What is the hardest natural substance on Earth?",
+            correctAnswer: "Diamond",
+            answerOptions: ["Gold", "Iron", "Diamond", "Quartz"]
         ),
-        QuestionZQ(
-            question: "What is the chemical formula for table salt?",
-            correctAnswer: "NaCl",
-            answerOptions: ["KCl", "NaCl", "HCl", "NaOH"]
+        QuestionCasu(
+            question: "What is the boiling point of water at sea level in Celsius?",
+            correctAnswer: "100",
+            answerOptions: ["90", "100", "120", "212"]
         ),
-        QuestionZQ(
-            question: "What is the capital of Italy?",
-            correctAnswer: "Rome",
-            answerOptions: ["Venice", "Rome", "Florence", "Milan"]
+        QuestionCasu(
+            question: "Which scientist is known as the father of modern physics?",
+            correctAnswer: "Galileo Galilei",
+            answerOptions: ["Albert Einstein", "Galileo Galilei", "Isaac Newton", "Marie Curie"]
         ),
-        QuestionZQ(
-            question: "Which layer of the Earth lies below the crust?",
-            correctAnswer: "Mantle",
-            answerOptions: ["Core", "Mantle", "Lithosphere", "Asthenosphere"]
+        QuestionCasu(
+            question: "What is the main ingredient in traditional Japanese miso soup?",
+            correctAnswer: "Miso paste",
+            answerOptions: ["Tofu", "Soy sauce", "Miso paste", "Seaweed"]
         ),
-        QuestionZQ(
-            question: "What is the primary greenhouse gas responsible for global warming?",
-            correctAnswer: "Carbon Dioxide",
-            answerOptions: ["Methane", "Oxygen", "Carbon Dioxide", "Nitrogen"]
+        QuestionCasu(
+            question: "Which planet has the most moons?",
+            correctAnswer: "Saturn",
+            answerOptions: ["Jupiter", "Saturn", "Uranus", "Neptune"]
         ),
-        QuestionZQ(
-            question: "Who wrote the play 'Hamlet'?",
-            correctAnswer: "William Shakespeare",
-            answerOptions: ["Christopher Marlowe", "William Shakespeare", "John Milton", "Ben Jonson"]
+        QuestionCasu(
+            question: "What is the largest mammal in the world?",
+            correctAnswer: "Blue whale",
+            answerOptions: ["Elephant", "Blue whale", "Giraffe", "Orca"]
         ),
-        QuestionZQ(
+        QuestionCasu(
             question: "What is the square root of 144?",
             correctAnswer: "12",
-            answerOptions: ["11", "12", "13", "14"]
+            answerOptions: ["10", "12", "14", "16"]
         ),
-        QuestionZQ(
-            question: "What is the largest planet in the Solar System?",
-            correctAnswer: "Jupiter",
-            answerOptions: ["Earth", "Jupiter", "Saturn", "Uranus"]
-        ),
-        QuestionZQ(
-            question: "What is the process plants use to convert sunlight into food?",
-            correctAnswer: "Photosynthesis",
-            answerOptions: ["Respiration", "Photosynthesis", "Digestion", "Transpiration"]
-        ),
-        QuestionZQ(
-            question: "What is the smallest unit of life?",
-            correctAnswer: "Cell",
-            answerOptions: ["Atom", "Cell", "Molecule", "Organ"]
-        ),
-        QuestionZQ(
-            question: "Which planet is the hottest in the Solar System?",
-            correctAnswer: "Venus",
-            answerOptions: ["Mercury", "Venus", "Mars", "Jupiter"]
-        ),
-        QuestionZQ(
+        QuestionCasu(
             question: "What is the chemical formula for water?",
-            correctAnswer: "H₂O",
-            answerOptions: ["H₂O", "O₂", "CO₂", "H₂"]
+            correctAnswer: "H2O",
+            answerOptions: ["H2O", "CO2", "O2", "NaCl"]
         ),
-        QuestionZQ(
-            question: "Who is the author of 'The Origin of Species'?",
-            correctAnswer: "Charles Darwin",
-            answerOptions: ["Gregor Mendel", "Charles Darwin", "Carl Linnaeus", "Alfred Wallace"]
+        QuestionCasu(
+            question: "Which country is known as the Land of the Rising Sun?",
+            correctAnswer: "Japan",
+            answerOptions: ["China", "South Korea", "Japan", "Thailand"]
         ),
-        QuestionZQ(
-            question: "What is the name of the largest ocean on Earth?",
+        QuestionCasu(
+            question: "What is the largest ocean on Earth?",
             correctAnswer: "Pacific Ocean",
             answerOptions: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"]
         ),
-        QuestionZQ(
-            question: "Which element is represented by the symbol 'O'?",
-            correctAnswer: "Oxygen",
-            answerOptions: ["Oxygen", "Osmium", "Oxalate", "Ozone"]
-        ),
-        QuestionZQ(
-            question: "Which scientist developed the first vaccine for rabies?",
-            correctAnswer: "Louis Pasteur",
-            answerOptions: ["Alexander Fleming", "Edward Jenner", "Louis Pasteur", "Marie Curie"]
-        ),
-        QuestionZQ(
-            question: "What is the capital of France?",
-            correctAnswer: "Paris",
-            answerOptions: ["Rome", "Paris", "Berlin", "Madrid"]
-        ),
-        QuestionZQ(
-            question: "What is the atomic number of Hydrogen?",
-            correctAnswer: "1",
-            answerOptions: ["1", "2", "3", "4"]
-        ),
-        QuestionZQ(
-            question: "What is the largest mammal on Earth?",
-            correctAnswer: "Blue Whale",
-            answerOptions: ["Elephant", "Blue Whale", "Giraffe", "Orca"]
-        ),
-        QuestionZQ(
-            question: "What is the primary ingredient in glass?",
-            correctAnswer: "Sand",
-            answerOptions: ["Sand", "Silicon", "Salt", "Clay"]
-        ),
-        QuestionZQ(
-            question: "What is the capital city of Australia?",
-            correctAnswer: "Canberra",
-            answerOptions: ["Sydney", "Melbourne", "Canberra", "Brisbane"]
-        ),
-        QuestionZQ(
-            question: "What is the largest bone in the human body?",
-            correctAnswer: "Femur",
-            answerOptions: ["Femur", "Tibia", "Humerus", "Pelvis"]
-        ),
-        QuestionZQ(
-            question: "Which gas do plants primarily use during photosynthesis?",
-            correctAnswer: "Carbon Dioxide",
-            answerOptions: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"]
-        ),
-        QuestionZQ(
-            question: "What is the name of the smallest planet in the Solar System?",
-            correctAnswer: "Mercury",
-            answerOptions: ["Venus", "Mercury", "Mars", "Pluto"]
-        ),
-        QuestionZQ(
-            question: "Who is known as the father of modern chemistry?",
-            correctAnswer: "Antoine Lavoisier",
-            answerOptions: ["Dmitri Mendeleev", "Robert Boyle", "Antoine Lavoisier", "John Dalton"]
-        ),
-        QuestionZQ(
-            question: "What is the main source of energy for life on Earth?",
-            correctAnswer: "The Sun",
-            answerOptions: ["The Moon", "The Sun", "Volcanoes", "Ocean Currents"]
-        ),
-        QuestionZQ(
-            question: "What is the longest river in the world?",
-            correctAnswer: "The Nile",
-            answerOptions: ["The Amazon", "The Nile", "The Yangtze", "The Mississippi"]
-        ),
-        QuestionZQ(
-            question: "Which organ is responsible for pumping blood throughout the human body?",
-            correctAnswer: "Heart",
-            answerOptions: ["Lungs", "Heart", "Liver", "Kidneys"]
-        ),
-        QuestionZQ(
-            question: "What is the name of the closest star to Earth?",
-            correctAnswer: "The Sun",
-            answerOptions: ["Alpha Centauri", "The Sun", "Sirius", "Proxima Centauri"]
-        ),
-        QuestionZQ(
-            question: "Who is credited with discovering penicillin?",
-            correctAnswer: "Alexander Fleming",
-            answerOptions: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Gregor Mendel"]
-        ),
-        QuestionZQ(
-            question: "What is the chemical formula for carbon dioxide?",
-            correctAnswer: "CO₂",
-            answerOptions: ["CO", "CO₂", "C₂O", "C₃O₂"]
-        ),
-        QuestionZQ(
-            question: "What is the term for animals that eat both plants and meat?",
-            correctAnswer: "Omnivores",
-            answerOptions: ["Herbivores", "Omnivores", "Carnivores", "Insectivores"]
-        ),
-        QuestionZQ(
-            question: "Which country has the largest population in the world?",
-            correctAnswer: "China",
-            answerOptions: ["India", "China", "United States", "Indonesia"]
-        ),
-        QuestionZQ(
-            question: "What is the name of the instrument used to measure atmospheric pressure?",
-            correctAnswer: "Barometer",
-            answerOptions: ["Thermometer", "Barometer", "Hygrometer", "Anemometer"]
-        ),
-        QuestionZQ(
-            question: "Which process converts sugar into alcohol?",
-            correctAnswer: "Fermentation",
-            answerOptions: ["Photosynthesis", "Fermentation", "Oxidation", "Condensation"]
-        ),
-        QuestionZQ(
-            question: "What is the chemical symbol for potassium?",
-            correctAnswer: "K",
-            answerOptions: ["P", "K", "Pt", "Po"]
-        ),
-        QuestionZQ(
-            question: "What is the hardest natural substance on Earth?",
-            correctAnswer: "Diamond",
-            answerOptions: ["Gold", "Iron", "Diamond", "Platinum"]
-        ),
-        QuestionZQ(
-            question: "Which planet is known for its prominent ring system?",
-            correctAnswer: "Saturn",
-            answerOptions: ["Jupiter", "Uranus", "Saturn", "Neptune"]
-        ),
-        QuestionZQ(
-            question: "What is the SI unit of temperature?",
-            correctAnswer: "Kelvin",
-            answerOptions: ["Celsius", "Kelvin", "Fahrenheit", "Rankine"]
-        ),
-        QuestionZQ(
-            question: "Which animal is known as the King of the Jungle?",
-            correctAnswer: "Lion",
-            answerOptions: ["Tiger", "Elephant", "Lion", "Leopard"]
-        ),
-        QuestionZQ(
-            question: "What is the chemical symbol for gold?",
-            correctAnswer: "Au",
-            answerOptions: ["Ag", "Au", "Pb", "Pt"]
-        ),
-        QuestionZQ(
-            question: "What is the tallest mountain in the world?",
-            correctAnswer: "Mount Everest",
-            answerOptions: ["K2", "Mount Everest", "Kangchenjunga", "Makalu"]
-        ),
-        QuestionZQ(
-            question: "Which organ in the human body filters blood to produce urine?",
-            correctAnswer: "Kidney",
-            answerOptions: ["Liver", "Kidney", "Bladder", "Heart"]
-        ),
-        QuestionZQ(
-            question: "What is the term for molten rock beneath the Earth's surface?",
-            correctAnswer: "Magma",
-            answerOptions: ["Lava", "Magma", "Basalt", "Obsidian"]
-        ),
-        QuestionZQ(
-            question: "What is the main ingredient in bread?",
-            correctAnswer: "Flour",
-            answerOptions: ["Flour", "Sugar", "Yeast", "Salt"]
-        ),
-        QuestionZQ(
-            question: "Which planet is known as the Evening Star?",
-            correctAnswer: "Venus",
-            answerOptions: ["Venus", "Mars", "Mercury", "Jupiter"]
-        ),
-        QuestionZQ(
-            question: "Which scientist developed the periodic table of elements?",
-            correctAnswer: "Dmitri Mendeleev",
-            answerOptions: ["Dmitri Mendeleev", "Marie Curie", "Niels Bohr", "Antoine Lavoisier"]
-        ),
-        QuestionZQ(
-            question: "What is the primary language spoken in Brazil?",
-            correctAnswer: "Portuguese",
-            answerOptions: ["Spanish", "Portuguese", "French", "Italian"]
-        ),
-        QuestionZQ(
-            question: "What is the freezing point of water in Fahrenheit?",
-            correctAnswer: "32°F",
-            answerOptions: ["0°F", "32°F", "100°F", "212°F"]
-        ),
-        QuestionZQ(
+        QuestionCasu(
             question: "Which metal is liquid at room temperature?",
             correctAnswer: "Mercury",
-            answerOptions: ["Gold", "Mercury", "Iron", "Copper"]
+            answerOptions: ["Mercury", "Gold", "Silver", "Aluminum"]
         ),
-        QuestionZQ(
-            question: "Which ancient civilization built the pyramids?",
-            correctAnswer: "Egyptians",
-            answerOptions: ["Romans", "Egyptians", "Greeks", "Babylonians"]
+        QuestionCasu(
+            question: "What is the speed of light in a vacuum?",
+            correctAnswer: "299,792 km/s",
+            answerOptions: ["150,000 km/s", "299,792 km/s", "500,000 km/s", "1,000,000 km/s"]
         ),
-        QuestionZQ(
-            question: "What is the primary source of energy for Earth's climate?",
-            correctAnswer: "The Sun",
-            answerOptions: ["The Moon", "Volcanoes", "The Sun", "Ocean Currents"]
-        ),
-        QuestionZQ(
-            question: "Which gas is commonly known as laughing gas?",
-            correctAnswer: "Nitrous Oxide",
-            answerOptions: ["Carbon Dioxide", "Nitrous Oxide", "Helium", "Oxygen"]
-        ),
-        QuestionZQ(
-            question: "Who is the author of 'Pride and Prejudice'?",
-            correctAnswer: "Jane Austen",
-            answerOptions: ["Charlotte Brontë", "Jane Austen", "Mary Shelley", "Emily Brontë"]
-        ),
-        QuestionZQ(
-            question: "Which country is known as the Land of the Rising Sun?",
-            correctAnswer: "Japan",
-            answerOptions: ["China", "Japan", "South Korea", "Thailand"]
-        ),
-        QuestionZQ(
-            question: "What is the currency of the United Kingdom?",
-            correctAnswer: "Pound Sterling",
-            answerOptions: ["Euro", "Pound Sterling", "Dollar", "Franc"]
-        ),
-        QuestionZQ(
-            question: "What is the process by which a caterpillar becomes a butterfly?",
-            correctAnswer: "Metamorphosis",
-            answerOptions: ["Transformation", "Metamorphosis", "Evolution", "Fertilization"]
-        ),
-        QuestionZQ(
-            question: "Which planet has the strongest gravitational pull in the Solar System?",
-            correctAnswer: "Jupiter",
-            answerOptions: ["Earth", "Jupiter", "Neptune", "Saturn"]
-        ),
-        QuestionZQ(
-            question: "What is the most common blood type in humans?",
-            correctAnswer: "O+",
-            answerOptions: ["A+", "O+", "B+", "AB+"]
-        ),
-        QuestionZQ(
-            question: "Which is the only planet that rotates on its side?",
-            correctAnswer: "Uranus",
-            answerOptions: ["Venus", "Neptune", "Uranus", "Saturn"]
-        ),
-        QuestionZQ(
-            question: "Which element is used in pencils?",
-            correctAnswer: "Graphite",
-            answerOptions: ["Lead", "Graphite", "Carbon", "Zinc"]
-        ),
-        QuestionZQ(
-            question: "What is the capital city of Canada?",
-            correctAnswer: "Ottawa",
-            answerOptions: ["Toronto", "Vancouver", "Ottawa", "Montreal"]
-        ),
-        QuestionZQ(
-            question: "Which planet is the densest in the Solar System?",
-            correctAnswer: "Earth",
-            answerOptions: ["Mars", "Jupiter", "Earth", "Venus"]
-        ),
-        QuestionZQ(
-            question: "Who discovered the law of gravity?",
-            correctAnswer: "Isaac Newton",
-            answerOptions: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"]
-        ),
-        QuestionZQ(
-            question: "Which organelle contains the genetic material of a cell?",
-            correctAnswer: "Nucleus",
-            answerOptions: ["Mitochondria", "Nucleus", "Ribosome", "Golgi Apparatus"]
-        ),
-        QuestionZQ(
-            question: "What is the name of the largest internal organ in the human body?",
-            correctAnswer: "Liver",
-            answerOptions: ["Heart", "Liver", "Stomach", "Lungs"]
-        ),
-        QuestionZQ(
-            question: "What is the name of the galaxy that contains our Solar System?",
-            correctAnswer: "Milky Way",
-            answerOptions: ["Andromeda", "Milky Way", "Sombrero", "Triangulum"]
-        )
+        QuestionCasu(
+                question: "Which part of the plant conducts photosynthesis?",
+                correctAnswer: "Leaves",
+                answerOptions: ["Roots", "Stem", "Leaves", "Flowers"]
+            ),
+            QuestionCasu(
+                question: "What is the chemical symbol for sodium?",
+                correctAnswer: "Na",
+                answerOptions: ["S", "N", "Na", "Sn"]
+            ),
+            QuestionCasu(
+                question: "What is the capital of France?",
+                correctAnswer: "Paris",
+                answerOptions: ["London", "Rome", "Paris", "Berlin"]
+            ),
+            QuestionCasu(
+                question: "What is the largest planet in the solar system?",
+                correctAnswer: "Jupiter",
+                answerOptions: ["Earth", "Mars", "Jupiter", "Saturn"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the longest bone in the human body?",
+                correctAnswer: "Femur",
+                answerOptions: ["Humerus", "Femur", "Tibia", "Ulna"]
+            ),
+            QuestionCasu(
+                question: "Which gas do plants primarily absorb for photosynthesis?",
+                correctAnswer: "Carbon dioxide",
+                answerOptions: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"]
+            ),
+            QuestionCasu(
+                question: "Who wrote the play 'Romeo and Juliet'?",
+                correctAnswer: "William Shakespeare",
+                answerOptions: ["Jane Austen", "Charles Dickens", "William Shakespeare", "Mark Twain"]
+            ),
+            QuestionCasu(
+                question: "What is the most abundant element in the universe?",
+                correctAnswer: "Hydrogen",
+                answerOptions: ["Oxygen", "Carbon", "Hydrogen", "Nitrogen"]
+            ),
+            QuestionCasu(
+                question: "What is the freezing point of water in Celsius?",
+                correctAnswer: "0",
+                answerOptions: ["-1", "0", "1", "32"]
+            ),
+            QuestionCasu(
+                question: "What is the main component of the sun?",
+                correctAnswer: "Hydrogen",
+                answerOptions: ["Helium", "Hydrogen", "Carbon", "Nitrogen"]
+            ),
+            QuestionCasu(
+                question: "What is the smallest unit of life?",
+                correctAnswer: "Cell",
+                answerOptions: ["Atom", "Molecule", "Cell", "Tissue"]
+            ),
+            QuestionCasu(
+                question: "Who discovered penicillin?",
+                correctAnswer: "Alexander Fleming",
+                answerOptions: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Gregor Mendel"]
+            ),
+            QuestionCasu(
+                question: "Which planet is closest to the Sun?",
+                correctAnswer: "Mercury",
+                answerOptions: ["Venus", "Earth", "Mercury", "Mars"]
+            ),
+            QuestionCasu(
+                question: "What is the process by which plants make their own food?",
+                correctAnswer: "Photosynthesis",
+                answerOptions: ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"]
+            ),
+            QuestionCasu(
+                question: "Which blood type is considered the universal donor?",
+                correctAnswer: "O negative",
+                answerOptions: ["A positive", "B negative", "O negative", "AB positive"]
+            ),
+            QuestionCasu(
+                question: "What is the term for animals that eat only plants?",
+                correctAnswer: "Herbivores",
+                answerOptions: ["Carnivores", "Herbivores", "Omnivores", "Insectivores"]
+            ),
+            QuestionCasu(
+                question: "Which organ in the human body is responsible for producing insulin?",
+                correctAnswer: "Pancreas",
+                answerOptions: ["Liver", "Pancreas", "Kidneys", "Gallbladder"]
+            ),
+            QuestionCasu(
+                question: "What is the largest continent on Earth?",
+                correctAnswer: "Asia",
+                answerOptions: ["Africa", "Asia", "North America", "Europe"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the first artificial satellite launched into space?",
+                correctAnswer: "Sputnik 1",
+                answerOptions: ["Apollo 11", "Voyager 1", "Sputnik 1", "Hubble"]
+            ),
+            QuestionCasu(
+                question: "Which is the hottest planet in our solar system?",
+                correctAnswer: "Venus",
+                answerOptions: ["Mercury", "Venus", "Mars", "Jupiter"]
+            ),
+            QuestionCasu(
+                question: "What is the chemical symbol for gold?",
+                correctAnswer: "Au",
+                answerOptions: ["Ag", "Au", "Pb", "Fe"]
+            ),
+            QuestionCasu(
+                question: "What is the hardest natural substance known?",
+                correctAnswer: "Diamond",
+                answerOptions: ["Granite", "Diamond", "Quartz", "Marble"]
+            ),
+            QuestionCasu(
+                question: "Which country is known for the maple leaf on its flag?",
+                correctAnswer: "Canada",
+                answerOptions: ["USA", "Canada", "Australia", "New Zealand"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the closest galaxy to the Milky Way?",
+                correctAnswer: "Andromeda",
+                answerOptions: ["Andromeda", "Sombrero", "Whirlpool", "Cartwheel"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the largest desert in the world?",
+                correctAnswer: "Antarctic Desert",
+                answerOptions: ["Sahara", "Gobi", "Kalahari", "Antarctic Desert"]
+            ),
+            QuestionCasu(
+                question: "Who is known as the 'Father of Computers'?",
+                correctAnswer: "Charles Babbage",
+                answerOptions: ["Alan Turing", "Charles Babbage", "John von Neumann", "Bill Gates"]
+            ),
+            QuestionCasu(
+                question: "What is the most widely consumed beverage in the world after water?",
+                correctAnswer: "Tea",
+                answerOptions: ["Coffee", "Tea", "Juice", "Soda"]
+            ),
+            QuestionCasu(
+                question: "What is the smallest planet in our solar system?",
+                correctAnswer: "Mercury",
+                answerOptions: ["Mars", "Mercury", "Venus", "Pluto"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the process by which a caterpillar becomes a butterfly?",
+                correctAnswer: "Metamorphosis",
+                answerOptions: ["Evolution", "Transformation", "Metamorphosis", "Transmutation"]
+            ),
+        QuestionCasu(
+                question: "What is the chemical formula for water?",
+                correctAnswer: "H2O",
+                answerOptions: ["H2O", "CO2", "O2", "H2"]
+            ),
+            QuestionCasu(
+                question: "Which planet is known as the Red Planet?",
+                correctAnswer: "Mars",
+                answerOptions: ["Jupiter", "Mars", "Venus", "Saturn"]
+            ),
+            QuestionCasu(
+                question: "What is the main gas found in Earth's atmosphere?",
+                correctAnswer: "Nitrogen",
+                answerOptions: ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"]
+            ),
+            QuestionCasu(
+                question: "What is the capital of Japan?",
+                correctAnswer: "Tokyo",
+                answerOptions: ["Kyoto", "Tokyo", "Osaka", "Nagoya"]
+            ),
+            QuestionCasu(
+                question: "What is the SI unit of force?",
+                correctAnswer: "Newton",
+                answerOptions: ["Pascal", "Joule", "Newton", "Watt"]
+            ),
+            QuestionCasu(
+                question: "Who painted the 'Mona Lisa'?",
+                correctAnswer: "Leonardo da Vinci",
+                answerOptions: ["Vincent van Gogh", "Leonardo da Vinci", "Michelangelo", "Pablo Picasso"]
+            ),
+            QuestionCasu(
+                question: "What is the tallest mountain in the world?",
+                correctAnswer: "Mount Everest",
+                answerOptions: ["K2", "Mount Everest", "Kangchenjunga", "Lhotse"]
+            ),
+            QuestionCasu(
+                question: "Which element has the highest melting point?",
+                correctAnswer: "Tungsten",
+                answerOptions: ["Iron", "Gold", "Tungsten", "Platinum"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the organ responsible for pumping blood in the human body?",
+                correctAnswer: "Heart",
+                answerOptions: ["Lungs", "Brain", "Heart", "Liver"]
+            ),
+            QuestionCasu(
+                question: "Who was the first person to step on the Moon?",
+                correctAnswer: "Neil Armstrong",
+                answerOptions: ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Michael Collins"]
+            ),
+            QuestionCasu(
+                question: "What is the term for molten rock that erupts from a volcano?",
+                correctAnswer: "Lava",
+                answerOptions: ["Magma", "Lava", "Ash", "Basalt"]
+            ),
+            QuestionCasu(
+                question: "Which country is the largest by land area?",
+                correctAnswer: "Russia",
+                answerOptions: ["Canada", "China", "USA", "Russia"]
+            ),
+            QuestionCasu(
+                question: "What is the term for a group of stars forming a recognizable pattern?",
+                correctAnswer: "Constellation",
+                answerOptions: ["Galaxy", "Constellation", "Cluster", "Nebula"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the first man-made object to orbit Earth?",
+                correctAnswer: "Sputnik 1",
+                answerOptions: ["Sputnik 1", "Explorer 1", "Voyager 1", "Hubble"]
+            ),
+            QuestionCasu(
+                question: "What is the primary language spoken in Brazil?",
+                correctAnswer: "Portuguese",
+                answerOptions: ["Spanish", "Portuguese", "English", "French"]
+            ),
+            QuestionCasu(
+                question: "Which animal is known as the 'King of the Jungle'?",
+                correctAnswer: "Lion",
+                answerOptions: ["Tiger", "Lion", "Elephant", "Leopard"]
+            ),
+            QuestionCasu(
+                question: "What is the process by which water changes from liquid to gas?",
+                correctAnswer: "Evaporation",
+                answerOptions: ["Condensation", "Evaporation", "Sublimation", "Precipitation"]
+            ),
+            QuestionCasu(
+                question: "Who is the author of 'The Origin of Species'?",
+                correctAnswer: "Charles Darwin",
+                answerOptions: ["Gregor Mendel", "Charles Darwin", "Isaac Newton", "Albert Einstein"]
+            ),
+            QuestionCasu(
+                question: "What is the main ingredient in traditional Japanese sushi?",
+                correctAnswer: "Rice",
+                answerOptions: ["Seaweed", "Fish", "Rice", "Soy Sauce"]
+            ),
+            QuestionCasu(
+                question: "What is the smallest particle of an element?",
+                correctAnswer: "Atom",
+                answerOptions: ["Molecule", "Atom", "Proton", "Neutron"]
+            ),
+            QuestionCasu(
+                question: "Which ocean is the largest by surface area?",
+                correctAnswer: "Pacific Ocean",
+                answerOptions: ["Atlantic Ocean", "Indian Ocean", "Pacific Ocean", "Arctic Ocean"]
+            ),
+            QuestionCasu(
+                question: "What is the hardest naturally occurring mineral?",
+                correctAnswer: "Diamond",
+                answerOptions: ["Quartz", "Diamond", "Ruby", "Emerald"]
+            ),
+            QuestionCasu(
+                question: "Who discovered gravity?",
+                correctAnswer: "Isaac Newton",
+                answerOptions: ["Galileo Galilei", "Isaac Newton", "Albert Einstein", "Nikola Tesla"]
+            ),
+            QuestionCasu(
+                question: "What is the boiling point of water at sea level in Celsius?",
+                correctAnswer: "100",
+                answerOptions: ["90", "100", "110", "120"]
+            ),
+            QuestionCasu(
+                question: "What is the largest mammal in the world?",
+                correctAnswer: "Blue Whale",
+                answerOptions: ["Elephant", "Blue Whale", "Giraffe", "Whale Shark"]
+            ),
+            QuestionCasu(
+                question: "Which vitamin is produced when a person is exposed to sunlight?",
+                correctAnswer: "Vitamin D",
+                answerOptions: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"]
+            ),
+            QuestionCasu(
+                question: "Which planet is known as the 'Morning Star'?",
+                correctAnswer: "Venus",
+                answerOptions: ["Mercury", "Mars", "Venus", "Jupiter"]
+            ),
+            QuestionCasu(
+                question: "What is the currency of Japan?",
+                correctAnswer: "Yen",
+                answerOptions: ["Won", "Yen", "Dollar", "Rupee"]
+            ),
+            QuestionCasu(
+                question: "Which organelle is known as the powerhouse of the cell?",
+                correctAnswer: "Mitochondria",
+                answerOptions: ["Nucleus", "Mitochondria", "Ribosome", "Chloroplast"]
+            ),
+        QuestionCasu(
+                question: "What is the largest desert in the world?",
+                correctAnswer: "Sahara",
+                answerOptions: ["Sahara", "Arctic", "Gobi", "Kalahari"]
+            ),
+            QuestionCasu(
+                question: "Which gas is most abundant in Earth's atmosphere?",
+                correctAnswer: "Nitrogen",
+                answerOptions: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"]
+            ),
+            QuestionCasu(
+                question: "What is the smallest unit of life in all living organisms?",
+                correctAnswer: "Cell",
+                answerOptions: ["Atom", "Molecule", "Cell", "Organ"]
+            ),
+            QuestionCasu(
+                question: "Which continent is known as the 'Frozen Continent'?",
+                correctAnswer: "Antarctica",
+                answerOptions: ["Arctic", "Antarctica", "Europe", "Asia"]
+            ),
+            QuestionCasu(
+                question: "What is the square root of 144?",
+                correctAnswer: "12",
+                answerOptions: ["10", "12", "14", "16"]
+            ),
+            QuestionCasu(
+                question: "Which instrument is used to measure temperature?",
+                correctAnswer: "Thermometer",
+                answerOptions: ["Barometer", "Thermometer", "Hygrometer", "Anemometer"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the largest ocean on Earth?",
+                correctAnswer: "Pacific Ocean",
+                answerOptions: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"]
+            ),
+            QuestionCasu(
+                question: "What is the main ingredient in guacamole?",
+                correctAnswer: "Avocado",
+                answerOptions: ["Tomato", "Avocado", "Onion", "Cucumber"]
+            ),
+            QuestionCasu(
+                question: "Who wrote the play 'Romeo and Juliet'?",
+                correctAnswer: "William Shakespeare",
+                answerOptions: ["Christopher Marlowe", "William Shakespeare", "John Donne", "Ben Jonson"]
+            ),
+            QuestionCasu(
+                question: "Which organ is primarily responsible for detoxification in the human body?",
+                correctAnswer: "Liver",
+                answerOptions: ["Kidney", "Liver", "Lungs", "Heart"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the process by which plants make their own food?",
+                correctAnswer: "Photosynthesis",
+                answerOptions: ["Respiration", "Photosynthesis", "Digestion", "Transpiration"]
+            ),
+            QuestionCasu(
+                question: "What is the chemical symbol for gold?",
+                correctAnswer: "Au",
+                answerOptions: ["Au", "Ag", "Pt", "Pb"]
+            ),
+            QuestionCasu(
+                question: "Which animal is the largest land carnivore?",
+                correctAnswer: "Polar Bear",
+                answerOptions: ["Grizzly Bear", "Polar Bear", "Lion", "Tiger"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the boundary between Earth's crust and mantle?",
+                correctAnswer: "Mohorovičić Discontinuity",
+                answerOptions: ["Core", "Lithosphere", "Mohorovičić Discontinuity", "Asthenosphere"]
+            ),
+            QuestionCasu(
+                question: "Which country is famous for the tulip flower and windmills?",
+                correctAnswer: "Netherlands",
+                answerOptions: ["Germany", "Netherlands", "Denmark", "Switzerland"]
+            ),
+            QuestionCasu(
+                question: "Who discovered penicillin?",
+                correctAnswer: "Alexander Fleming",
+                answerOptions: ["Louis Pasteur", "Alexander Fleming", "Marie Curie", "Robert Koch"]
+            ),
+            QuestionCasu(
+                question: "Which is the fastest land animal?",
+                correctAnswer: "Cheetah",
+                answerOptions: ["Lion", "Tiger", "Cheetah", "Leopard"]
+            ),
+            QuestionCasu(
+                question: "What is the capital of Australia?",
+                correctAnswer: "Canberra",
+                answerOptions: ["Sydney", "Melbourne", "Canberra", "Brisbane"]
+            ),
+            QuestionCasu(
+                question: "What is the chemical formula for table salt?",
+                correctAnswer: "NaCl",
+                answerOptions: ["NaCl", "KCl", "HCl", "CaCl"]
+            ),
+            QuestionCasu(
+                question: "Which is the smallest planet in our solar system?",
+                correctAnswer: "Mercury",
+                answerOptions: ["Mercury", "Mars", "Venus", "Pluto"]
+            ),
+            QuestionCasu(
+                question: "What is the term for a baby goat?",
+                correctAnswer: "Kid",
+                answerOptions: ["Cub", "Fawn", "Kid", "Lamb"]
+            ),
+            QuestionCasu(
+                question: "Which element is essential for the formation of bones and teeth?",
+                correctAnswer: "Calcium",
+                answerOptions: ["Iron", "Calcium", "Potassium", "Magnesium"]
+            ),
+            QuestionCasu(
+                question: "What is the scientific name of the human species?",
+                correctAnswer: "Homo sapiens",
+                answerOptions: ["Homo sapiens", "Homo erectus", "Homo habilis", "Homo neanderthalensis"]
+            ),
+            QuestionCasu(
+                question: "Who developed the theory of relativity?",
+                correctAnswer: "Albert Einstein",
+                answerOptions: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"]
+            ),
+            QuestionCasu(
+                question: "What is the process by which plants release oxygen into the atmosphere?",
+                correctAnswer: "Photosynthesis",
+                answerOptions: ["Respiration", "Photosynthesis", "Transpiration", "Assimilation"]
+            ),
+            QuestionCasu(
+                question: "Which planet is the hottest in our solar system?",
+                correctAnswer: "Venus",
+                answerOptions: ["Mars", "Venus", "Mercury", "Jupiter"]
+            ),
+            QuestionCasu(
+                question: "What is the name of the longest bone in the human body?",
+                correctAnswer: "Femur",
+                answerOptions: ["Tibia", "Humerus", "Femur", "Radius"]
+            ),
+            QuestionCasu(
+                question: "What is the study of the weather called?",
+                correctAnswer: "Meteorology",
+                answerOptions: ["Geology", "Meteorology", "Astronomy", "Ecology"]
+            ),
+            QuestionCasu(
+                question: "What is the capital of Canada?",
+                correctAnswer: "Ottawa",
+                answerOptions: ["Toronto", "Ottawa", "Montreal", "Vancouver"]
+            )
     ]
 }

@@ -1,7 +1,7 @@
 import UserNotifications
 
-class NotificationManagerZodiakQuiz: NSObject, UNUserNotificationCenterDelegate {
-    static let shared = NotificationManagerZodiakQuiz()
+class NotificationManagerCasuquiz: NSObject, UNUserNotificationCenterDelegate {
+    static let shared = NotificationManagerCasuquiz()
     
     private override init() {
         super.init()

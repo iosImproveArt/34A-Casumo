@@ -50,7 +50,7 @@ struct LoadingViewSQ: View {
             }.background(1)
             
             
-            PrivacyViewZodiakQuiz(showLoading: $showView)
+            PrivacyViewCasuquiz(showLoading: $showView)
                 .opacity(firstInApp ? 1: 0)
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

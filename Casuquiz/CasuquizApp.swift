@@ -21,7 +21,7 @@ struct Zodiac_QuizApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentViewZodiakQuiz()
+            ContentViewCasuquiz()
                 .preferredColorScheme(.dark)
         }
     }

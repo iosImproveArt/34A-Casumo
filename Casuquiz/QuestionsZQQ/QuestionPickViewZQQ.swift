@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionPickViewZodiakQuiz: View {
+struct QuestionPickViewCasuquiz: View {
     
       var d4242d2 = "24dd2d"
     var d24d2d = 242
@@ -33,20 +33,20 @@ struct QuestionPickViewZodiakQuiz: View {
             
             VStack(spacing: isSE ? 40: 70) {
                 NavigationLink {
-                    QuestionViewZodiakQuiz(type: .oneP)
+                    QuestionViewCasuquiz(type: .oneP)
                 } label: {
                     Image("1p")
                 }
                 
                 
                 NavigationLink {
-                    QuestionViewZodiakQuiz(type: .withC)
+                    QuestionViewCasuquiz(type: .withC)
                 } label: {
                     Image("wc")
                 }
                 
                 NavigationLink {
-                    QuestionViewZodiakQuiz(type: .withF)
+                    QuestionViewCasuquiz(type: .withF)
                 } label: {
                     Image("wf")
                 }
@@ -58,5 +58,5 @@ struct QuestionPickViewZodiakQuiz: View {
 }
 
 #Preview {
-    ContentViewZodiakQuiz(showLoading: false, selectedTab: .quiz)
+    ContentViewCasuquiz(showLoading: false, selectedTab: .quiz)
 }
