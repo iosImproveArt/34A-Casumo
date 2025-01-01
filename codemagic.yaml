@@ -12,8 +12,8 @@ workflows:
             - DEFAULT
         vars:
           BUNDLE_ID: "com.zodiacquiz"
-          XCODE_WORK: "Zodiac-Quiz.xcodeproj"
-          XCODE_SCHEME: "Zodiac-Quiz"
+          XCODE_WORK: "Casuquiz.xcodeproj"
+          XCODE_SCHEME: "Casuquiz"
           
       scripts:
         - name: Set up provisioning profiles settings on Xcode project

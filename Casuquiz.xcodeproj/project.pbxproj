@@ -11,6 +11,19 @@
 		F62760FB2D25800400CBB353 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62760F82D25800400CBB353 /* ContentView.swift */; };
 		F62760FC2D25800400CBB353 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62760F42D25800400CBB353 /* Preview Assets.xcassets */; };
 		F62760FD2D25800400CBB353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62760F62D25800400CBB353 /* Assets.xcassets */; };
+		F627610E2D2580AA00CBB353 /* ProfileViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627610C2D2580AA00CBB353 /* ProfileViewZQQ.swift */; };
+		F627610F2D2580AA00CBB353 /* NotificationCenterZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627610A2D2580AA00CBB353 /* NotificationCenterZQQ.swift */; };
+		F62761102D2580AA00CBB353 /* QuestionViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761052D2580AA00CBB353 /* QuestionViewZQQ.swift */; };
+		F62761112D2580AA00CBB353 /* FactsViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761092D2580AA00CBB353 /* FactsViewZQQ.swift */; };
+		F62761122D2580AA00CBB353 /* QuestionPickViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761062D2580AA00CBB353 /* QuestionPickViewZQQ.swift */; };
+		F62761132D2580AA00CBB353 /* ExtensionsZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761082D2580AA00CBB353 /* ExtensionsZQQ.swift */; };
+		F62761142D2580AA00CBB353 /* ImagePickerZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F627610B2D2580AA00CBB353 /* ImagePickerZQQ.swift */; };
+		F62761152D2580AA00CBB353 /* QuestionViewModelZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761042D2580AA00CBB353 /* QuestionViewModelZQQ.swift */; };
+		F62761162D2580AA00CBB353 /* QuestionsViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62760FE2D2580AA00CBB353 /* QuestionsViewZQQ.swift */; };
+		F62761172D2580AA00CBB353 /* LoadingViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62760FF2D2580AA00CBB353 /* LoadingViewZQQ.swift */; };
+		F62761182D2580AA00CBB353 /* PrivacyViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761012D2580AA00CBB353 /* PrivacyViewZQQ.swift */; };
+		F62761192D2580AA00CBB353 /* WebViewZQQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62761022D2580AA00CBB353 /* WebViewZQQ.swift */; };
+		F627611A2D2580AA00CBB353 /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = F62761002D2580AA00CBB353 /* privacy.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,20 @@
 		F62760F62D25800400CBB353 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F62760F72D25800400CBB353 /* CasuquizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasuquizApp.swift; sourceTree = "<group>"; };
 		F62760F82D25800400CBB353 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F62760FE2D2580AA00CBB353 /* QuestionsViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewZQQ.swift; sourceTree = "<group>"; };
+		F62760FF2D2580AA00CBB353 /* LoadingViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewZQQ.swift; sourceTree = "<group>"; };
+		F62761002D2580AA00CBB353 /* privacy.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = privacy.html; sourceTree = "<group>"; };
+		F62761012D2580AA00CBB353 /* PrivacyViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewZQQ.swift; sourceTree = "<group>"; };
+		F62761022D2580AA00CBB353 /* WebViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewZQQ.swift; sourceTree = "<group>"; };
+		F62761042D2580AA00CBB353 /* QuestionViewModelZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModelZQQ.swift; sourceTree = "<group>"; };
+		F62761052D2580AA00CBB353 /* QuestionViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewZQQ.swift; sourceTree = "<group>"; };
+		F62761062D2580AA00CBB353 /* QuestionPickViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPickViewZQQ.swift; sourceTree = "<group>"; };
+		F62761082D2580AA00CBB353 /* ExtensionsZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsZQQ.swift; sourceTree = "<group>"; };
+		F62761092D2580AA00CBB353 /* FactsViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewZQQ.swift; sourceTree = "<group>"; };
+		F627610A2D2580AA00CBB353 /* NotificationCenterZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterZQQ.swift; sourceTree = "<group>"; };
+		F627610B2D2580AA00CBB353 /* ImagePickerZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerZQQ.swift; sourceTree = "<group>"; };
+		F627610C2D2580AA00CBB353 /* ProfileViewZQQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewZQQ.swift; sourceTree = "<group>"; };
+		F627611B2D2580BA00CBB353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +86,50 @@
 		F62760F92D25800400CBB353 /* Casuquiz */ = {
 			isa = PBXGroup;
 			children = (
+				F627611B2D2580BA00CBB353 /* Info.plist */,
 				F62760F72D25800400CBB353 /* CasuquizApp.swift */,
 				F62760F82D25800400CBB353 /* ContentView.swift */,
+				F62760FE2D2580AA00CBB353 /* QuestionsViewZQQ.swift */,
+				F62761032D2580AA00CBB353 /* LoadingZQQ */,
+				F62761072D2580AA00CBB353 /* QuestionsZQQ */,
+				F62761082D2580AA00CBB353 /* ExtensionsZQQ.swift */,
+				F62761092D2580AA00CBB353 /* FactsViewZQQ.swift */,
+				F627610A2D2580AA00CBB353 /* NotificationCenterZQQ.swift */,
+				F627610D2D2580AA00CBB353 /* ProfileZQQ */,
 				F62760F52D25800400CBB353 /* Preview Content */,
 				F62760F62D25800400CBB353 /* Assets.xcassets */,
 			);
 			path = Casuquiz;
+			sourceTree = "<group>";
+		};
+		F62761032D2580AA00CBB353 /* LoadingZQQ */ = {
+			isa = PBXGroup;
+			children = (
+				F62760FF2D2580AA00CBB353 /* LoadingViewZQQ.swift */,
+				F62761002D2580AA00CBB353 /* privacy.html */,
+				F62761012D2580AA00CBB353 /* PrivacyViewZQQ.swift */,
+				F62761022D2580AA00CBB353 /* WebViewZQQ.swift */,
+			);
+			path = LoadingZQQ;
+			sourceTree = "<group>";
+		};
+		F62761072D2580AA00CBB353 /* QuestionsZQQ */ = {
+			isa = PBXGroup;
+			children = (
+				F62761042D2580AA00CBB353 /* QuestionViewModelZQQ.swift */,
+				F62761052D2580AA00CBB353 /* QuestionViewZQQ.swift */,
+				F62761062D2580AA00CBB353 /* QuestionPickViewZQQ.swift */,
+			);
+			path = QuestionsZQQ;
+			sourceTree = "<group>";
+		};
+		F627610D2D2580AA00CBB353 /* ProfileZQQ */ = {
+			isa = PBXGroup;
+			children = (
+				F627610B2D2580AA00CBB353 /* ImagePickerZQQ.swift */,
+				F627610C2D2580AA00CBB353 /* ProfileViewZQQ.swift */,
+			);
+			path = ProfileZQQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F62760FC2D25800400CBB353 /* Preview Assets.xcassets in Resources */,
+				F627611A2D2580AA00CBB353 /* privacy.html in Resources */,
 				F62760FD2D25800400CBB353 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +208,18 @@
 			files = (
 				F62760FA2D25800400CBB353 /* CasuquizApp.swift in Sources */,
 				F62760FB2D25800400CBB353 /* ContentView.swift in Sources */,
+				F627610E2D2580AA00CBB353 /* ProfileViewZQQ.swift in Sources */,
+				F627610F2D2580AA00CBB353 /* NotificationCenterZQQ.swift in Sources */,
+				F62761102D2580AA00CBB353 /* QuestionViewZQQ.swift in Sources */,
+				F62761112D2580AA00CBB353 /* FactsViewZQQ.swift in Sources */,
+				F62761122D2580AA00CBB353 /* QuestionPickViewZQQ.swift in Sources */,
+				F62761132D2580AA00CBB353 /* ExtensionsZQQ.swift in Sources */,
+				F62761142D2580AA00CBB353 /* ImagePickerZQQ.swift in Sources */,
+				F62761152D2580AA00CBB353 /* QuestionViewModelZQQ.swift in Sources */,
+				F62761162D2580AA00CBB353 /* QuestionsViewZQQ.swift in Sources */,
+				F62761172D2580AA00CBB353 /* LoadingViewZQQ.swift in Sources */,
+				F62761182D2580AA00CBB353 /* PrivacyViewZQQ.swift in Sources */,
+				F62761192D2580AA00CBB353 /* WebViewZQQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,21 +356,30 @@
 				DEVELOPMENT_TEAM = FWVBV65566;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Casuquiz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Casuquiz;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to set a photo for your profile.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = testleschenko.Casuquiz;
+				PRODUCT_BUNDLE_IDENTIFIER = testleschenko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,21 +394,30 @@
 				DEVELOPMENT_TEAM = FWVBV65566;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Casuquiz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Casuquiz;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to set a photo for your profile.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = testleschenko.Casuquiz;
+				PRODUCT_BUNDLE_IDENTIFIER = testleschenko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
