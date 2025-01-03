@@ -6,12 +6,12 @@ workflows:
         
         ios_signing:
             distribution_type: app_store
-            bundle_identifier: com.zodiacquiz
+            bundle_identifier: com.casuquiz
             
         groups:
             - DEFAULT
         vars:
-          BUNDLE_ID: "com.zodiacquiz"
+          BUNDLE_ID: "com.casuquiz"
           XCODE_WORK: "Casuquiz.xcodeproj"
           XCODE_SCHEME: "Casuquiz"
           
